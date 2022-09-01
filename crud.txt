@@ -1,0 +1,32 @@
+CREATE DATABASE crud;
+
+USE crud;
+
+CREATE TABLE tab_usuarios(
+	id_usuario INT NOT NULL PRIMARY KEY IDENTITY,
+	nome VARCHAR(50) NOT NULL,
+	email VARCHAR(50) NOT NULL,
+	senha VARCHAR(200) NOT NULL,
+	frase VARCHAR(50) NOT NULL,
+	nivel INT NOT NULL,
+	ativo INT NOT NULL,
+	login VARCHAR(20) NOT NULL
+);
+
+
+CREATE TABLE tab_pessoas(
+	id_pessoa INT NOT NULL PRIMARY KEY IDENTITY,
+	nome VARCHAR(50) NOT NULL,
+	email VARCHAR(50) NOT NULL,
+	fone VARCHAR(15) NOT NULL,
+	foto VARCHAR(50) NOT NULL,
+	ativo INT NOT NULL,
+	dt_nasc DATE NOT NULL,
+	sexo VARCHAR(15) NOT NULL
+);
+
+INSERT INTO tab_usuarios(nome, email, senha, frase, nivel, ativo)
+VALUES
+('Fábio Corrêa', 'shefarol@hotmail.com', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3','padrão',0,1);
+
+SELECT * FROM tab_usuarios;

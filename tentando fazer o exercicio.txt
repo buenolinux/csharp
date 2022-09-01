@@ -1,0 +1,16 @@
+ if (cbbBuscar.SelectedIndex == 5)
+            {
+                DialogResult Pergunta = MessageBox.Show("Deseja ativar esta pessoa", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (Pergunta == DialogResult.Yes)
+                {
+                    Pessoa Ativa = new Pessoa(int.Parse(txbId.Text), 1);
+                    Ativa.AtivaPessoa();
+                    
+                    //cbbBuscar.SelectedIndex = 1;
+                    dgvPessoas.DataSource = Pessoa.BuscarTodasPessoas();
+                    MessageBox.Show("Pessoa ativada", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    toolStripCancelar.PerformClick();
+                }
+            }
+
+debugging c#
